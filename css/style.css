@@ -1,4 +1,4 @@
-.header__body, .header__menu, .header__actions {
+.header__body, .header__menu, .header__actions, .sections-title-container, .blocks-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +12,7 @@
 
 body {
   font-family: 'Work Sans', sans-serif;
+  color: #151C22;
 }
 
 body._lock {
@@ -156,7 +157,6 @@ body._lock {
 .promo__headline {
   font-family: 'Anton', sans-serif;
   font-size: calc(75px + 53 * (100vw / 1366));
-  color: #151C22;
 }
 
 .promo__headline span {
@@ -334,5 +334,78 @@ body._lock {
   }
   .promo__arrow {
     display: none;
+  }
+}
+
+.bestsellers {
+  width: 100%;
+}
+
+.bestsellers__body {
+  width: 100%;
+  margin: 130px 0 110px 0;
+}
+
+.sections-title-container {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.sections-headline {
+  font-weight: bold;
+  font-size: calc(24px + 8 * (100vw / 1366));
+}
+
+.sections-link {
+  font-weight: 500;
+  font-size: calc(16px + 2 * (100vw / 1366));
+  color: #151C22;
+  text-decoration: underline;
+}
+
+.blocks-section {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blocks-section__item {
+  width: 255px;
+  margin-bottom: 40px;
+}
+
+.blocks-section__picture {
+  width: 95%;
+}
+
+.blocks-section__name {
+  font-weight: 500;
+  font-size: calc(16px + 2 * (100vw / 1366));
+  margin: 25px 0 0 0;
+}
+
+.blocks-section__name span {
+  font-weight: 6;
+}
+
+@media screen and (max-width: 805px) {
+  .sections-title-container {
+    display: block;
+    margin: 0 0 50px 0;
+  }
+  .blocks-section__item {
+    width: 45%;
+  }
+  .sections-headline {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .blocks-section__item {
+    width: 100%;
+  }
+  .blocks-section__picture {
+    width: 100%;
   }
 }
