@@ -337,11 +337,13 @@ body._lock {
   }
 }
 
-.bestsellers {
+.bestsellers,
+.shop-by-category {
   width: 100%;
 }
 
-.bestsellers__body {
+.bestsellers__body,
+.shop-by-category__body {
   width: 100%;
   margin: 130px 0 110px 0;
 }
@@ -372,6 +374,7 @@ body._lock {
 .blocks-section__item {
   width: 255px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .blocks-section__picture {
