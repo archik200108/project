@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-$fnt-128: calc(100px + 28 * (100vw / 1366));
+$fnt-128: calc(75px + 53 * (100vw / 1366));
 $fnt-18: calc(16px + 2 * (100vw / 1366));
 $fnt-16: calc(14px + 2 * (100vw / 1366));
 
@@ -35,7 +35,7 @@ body._lock {
 
     &__body {
         width: 100%;
-        height: 10vh;
+        height: 75px;
         @extend %df-basic;
     }
 
@@ -44,7 +44,7 @@ body._lock {
     }
 
     &__menu {
-        width: 15%;
+        width: 20%;
         @extend %df-basic;
     }
 
@@ -150,7 +150,7 @@ body._lock {
 
         span {
             font-family: 'Work Sans', sans-serif;
-            font-size: $fnt-18;
+            font-size: $fnt-16;
             color: #727A82;
             margin-bottom: 25px;
         }
@@ -160,6 +160,7 @@ body._lock {
         width: 65%;
         height: 65px;
         margin-top: 50px;
+        padding: 24px 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,7 +183,7 @@ body._lock {
 
     &__arrow {
         position: absolute;
-        left: 0;
+        left: 20px;
         bottom: 50px;
     }
 }
@@ -190,7 +191,7 @@ body._lock {
 @media screen and (max-width: 767px) {
     .header__burger {
         width: 30px;
-        height: 30px;
+        height: 20px;
         display: block;
         position: relative;
         z-index: 3;
@@ -199,7 +200,6 @@ body._lock {
         span,
         &::before,
         &::after {
-            left: 0;
             position: absolute;
             height: 10%;
             width: 100%;
@@ -266,5 +266,55 @@ body._lock {
     .header__link {
         font-size: 24px;
         line-height: 40px;
+    }
+
+    .promo {
+        justify-content: center;
+
+        &__body {
+            display: block;
+            height: 350px;
+        }
+
+        &__picture {
+            display: none;
+        }
+
+        &__article {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        &__btn {
+            width: 30%;
+            margin: 0;
+            align-self: center;
+        }
+
+        &__headline {
+            height: auto;
+        }
+
+        &__btn {
+            width: 140px;
+            height: 50px;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 569px) {
+    .logo {
+        display: none;
+    }
+
+    .promo__arrow {
+        display: none;
     }
 }
