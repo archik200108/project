@@ -40,6 +40,18 @@ body._lock {
         @extend %df-basic;
     }
 
+    &__logo {
+        width: 70px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
     &__burger {
         display: none;
     }
@@ -113,17 +125,6 @@ body._lock {
     }
 }
 
-.logo {
-    width: 70px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    img {
-        width: 100%;
-    }
-}
 
 .main {
     width: 100%;
@@ -310,7 +311,7 @@ body._lock {
 }
 
 @media screen and (max-width: 569px) {
-    .logo {
+    .header__logo {
         display: none;
     }
 
@@ -398,4 +399,112 @@ body._lock {
         width: 100%;
     }
 
+}
+
+.footer {
+    width: 100%;
+    height: 225px;
+    background: $color-1;
+
+    &__body {
+        width: 100%;
+        height: 225px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        width: 70px;
+        margin-bottom: 35px;
+    }
+
+    &__menu {
+        width: 45%;
+        @extend %df-basic;
+        margin-bottom: 35px;
+    }
+
+    &__menu-item {
+        color: white;
+        font-size: $fnt-18;
+    }
+
+    &__menu-social {
+        width: 15%;
+        @extend %df-basic;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .footer__menu {
+        width: 50%;
+    }
+
+    .footer__menu-social {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer__menu {
+        width: 60%;
+    }
+
+    .footer__menu-social {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 619px) {
+
+    .footer__logo {
+        display: block;
+        width: 70px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .footer__body {
+        width: 100%;
+        height: 225px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .footer__menu {
+        width: 100px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__menu-item {
+        margin-bottom: 10px;
+    }
+
+    .footer__menu-social {
+        width: 100px;
+        height: 100%;  
+        flex-direction: column;
+        justify-content: center;
+
+        a {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .footer__logo{
+        display: none;
+    }
 }
